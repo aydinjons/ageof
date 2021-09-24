@@ -1,0 +1,35 @@
+
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+    </div>
+    <div class="col-md-auto">
+      <h3>Unit Detail Page</h3>
+      <ng-container *ngIf="unit">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+        
+            </tr>
+          </thead>
+          <tbody>
+            <tr  *ngFor="let column of columns">
+              <th scope="row">{{column.title}}:</th>
+              <td>{{unit[column.dataIndex]}}</td>
+            
+            </tr>
+            <tr  *ngFor="let cost of costColumns">
+              <th scope="row"  *ngIf="unit[cost.dataIndex][cost.val]">{{cost.title}}:</th>
+              <td  *ngIf="unit[cost.dataIndex][cost.val]" >{{unit[cost.dataIndex][cost.val]}}</td>
+            </tr>
+          </tbody>
+        </table>
+        </ng-container>
+    </div>
+    <div class="col col-lg-2">
+    </div>
+  </div>
+</div>

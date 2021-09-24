@@ -1,0 +1,41 @@
+.main-container {
+  padding: 5%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.age-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  .button-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: auto;
+  }
+}
+
+.costs-container{
+    margin-bottom: 40px;
+}
+
+.table {
+  width: 50%;
+}
+ul {
+  list-style-type: none;
+  li{
+    display: flex;
+  }
+  
+}
+
+.active-row{
+  &:hover, &:active{
+    background-color :dodgerblue;
+    cursor: pointer;
+  }
+}
